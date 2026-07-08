@@ -82,3 +82,12 @@ button:nth-child(14) {
   background: #a5a5a5;
   color: black;
 }
+
+#message{
+    color:white;
+    text-align:center;
+    margin-top:12px;
+    font-size:14px;
+    min-height:20px;
+    opacity:0.8;
+}
