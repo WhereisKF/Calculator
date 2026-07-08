@@ -26,9 +26,11 @@ function closePaymentPopup() {
     paymentPopup.style.display = "none";
 }
 
+const API_BASE = "https://calculator-backend-8m4i.onrender.com";
+
 paypal.Buttons({
     createOrder: async function () {
-        const response = await fetch("https://calculator-backend-8m4i.onrender.com/create-order", {
+        const response = await fetch(`${API_BASE}/create-order`, {
             method: "POST"
         });
 
@@ -37,7 +39,7 @@ paypal.Buttons({
     },
 
     onApprove: async function (data) {
-        const response = await fetch("https://calculator-backend-8m4i.onrender.com/create-order", {
+        const response = await fetch(`${API_BASE}/capture-order`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
