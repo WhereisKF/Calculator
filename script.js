@@ -28,7 +28,7 @@ function closePaymentPopup() {
 
 paypal.Buttons({
     createOrder: async function () {
-        const response = await fetch("https://calculator-backend-xxxx.onrender.com/create-order", {
+        const response = await fetch("https://calculator-backend-8m4i.onrender.com", {
             method: "POST"
         });
 
@@ -37,7 +37,7 @@ paypal.Buttons({
     },
 
     onApprove: async function (data) {
-        const response = await fetch("https://calculator-backend-xxxx.onrender.com/capture-order", {
+        const response = await fetch("https://calculator-backend-8m4i.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
